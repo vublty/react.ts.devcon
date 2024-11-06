@@ -1,0 +1,22 @@
+{
+	"name": "react.ts.devcon",
+	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.20",
+	"features": {
+		"ghcr.io/cirolosapio/devcontainers-features/alpine-node:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"EditorConfig.EditorConfig",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"Orta.vscode-jest",
+				"christian-kohler.npm-intellisense",
+				"humao.rest-client",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"postStartCommand": "npm create vite@latest src -- --template react-ts && cd src && npm install && npm run dev"
+}
