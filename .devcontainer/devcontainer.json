@@ -18,5 +18,7 @@
 			]
 		}
 	},
-	"postStartCommand": "npm create vite@latest src -- --template react-ts && cd src && npm install && npm run dev"
+	// Remove "postCreateCommand" after vite is installed the first time
+	"postCreateCommand": "npm create vite@latest -y src -- --template react-ts",
+	"postStartCommand": "cd src && npm install && npm run dev"
 }
